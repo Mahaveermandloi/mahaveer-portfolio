@@ -5,7 +5,6 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: false, // or 'media(set based on OS)' or 'class'
   theme: {
     screens: {
       sm: "640px",
@@ -15,8 +14,8 @@ module.exports = {
       "2xl": "1536px",
     },
     fontFamily: {
-      display: ["Sora", "system-ui", "sans-serif"],
-      body: ["Inter", "system-ui", "sans-serif"],
+      display: ["Sora", "sans-serif"],
+      body: ["Inter", "sans-serif"],
     },
     colors: {
       purple: {
