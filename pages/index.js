@@ -1,7 +1,11 @@
+import Navbar from "@/components/navbar";
+import useColorMode from "@/hooks/useColorMode";
 import Head from "next/head";
 import Image from "next/image";
 
 export default function Home() {
+  const [colorMode, setColorMode] = useColorMode();
+
   return (
     <>
       <Head>
@@ -10,6 +14,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
+
+      <div className="bg-neutral-50 dark:bg-neutral-900 h-screen">
+        
+      </div>
     </>
   );
 }
