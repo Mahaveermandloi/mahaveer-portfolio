@@ -4,6 +4,7 @@ import { BsSunFill, BsMoonStarsFill, BsGithub, BsLinkedin } from "react-icons/bs
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import useColorMode from "@/hooks/useColorMode";
+import dynamic from "next/dynamic";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -12,7 +13,7 @@ const navigation = [
   { name: "Resume", href: "/public/favicon.ico" },
 ];
 
-export default function Navbar() {
+const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [colorMode, setColorMode] = useColorMode();
 
@@ -142,3 +143,6 @@ export default function Navbar() {
     </>
   );
 }
+
+export default dynamic (() => Promise.resolve(Navbar), {ssr: false})
+

@@ -1,10 +1,8 @@
 import Navbar from "@/components/navbar";
-import useColorMode from "@/hooks/useColorMode";
 import Head from "next/head";
 import Image from "next/image";
 
 export default function Home() {
-  const [colorMode, setColorMode] = useColorMode();
 
   return (
     <>
@@ -16,7 +14,7 @@ export default function Home() {
       </Head>
 
       <div className="bg-neutral-50 dark:bg-neutral-900 h-screen">
-        
+        <Navbar />
       </div>
     </>
   );
