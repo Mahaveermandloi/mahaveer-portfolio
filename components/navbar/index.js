@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="bg-neutral-50 dark:bg-neutral-900">
         <header className="inset-x-0 top-0 z-50">
           <nav
-            className="flex items-center justify-between p-6 px-8 lg:px-20"
+            className="flex items-center justify-between p-6  px-6 sm:px-16 lg:px-120"
             aria-label="Global"
           >
             <div className="flex lg:flex-1">
@@ -74,7 +74,7 @@ const Navbar = () => {
             onClose={setMobileMenuOpen}
           >
             <div className="fixed inset-0 z-50" />
-            <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-neutral-50 dark:bg-neutral-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10 dark:sm:ring-neutral-800">
+            <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-neutral-50 dark:bg-neutral-900 px-6 sm:px-16 md:px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10 dark:sm:ring-neutral-800">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
                   <h3 className="font-body text-4xl font-bold text-neutral-900 dark:text-neutral-50">
