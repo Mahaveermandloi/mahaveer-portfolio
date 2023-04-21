@@ -1,11 +1,9 @@
 import Navbar from "@/components/navbar";
-import useColorMode from "@/hooks/useColorMode";
 import Head from "next/head";
 import Image from "next/image";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function Home() {
-  const [colorMode, setColorMode] = useColorMode();
-
   return (
     <>
       <Head>
@@ -16,8 +14,57 @@ export default function Home() {
       </Head>
 
       <div className="bg-neutral-50 dark:bg-neutral-900 h-screen">
-        
+        <Navbar />
+        <Hero />
       </div>
     </>
   );
 }
+
+const Hero = () => {
+  return (
+    <div className="max-w-5xl py-28 px-6 sm:px-16 lg:px-120 sm:py-48 lg:py-52">
+      <div className="text-left">
+        <h1 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 ">
+          Hi, I&apos;m Nigar Safarova.
+        </h1>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-purple-900 dark:text-purple-300">
+          Front-end Developer
+        </h2>
+        <p className="font-body mt-6 text-sm md:text-lg leading-8 text-neutral-600 dark:text-neutral-100">
+          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
+          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
+          aliqua.
+        </p>
+        <div className="mt-10 flex justify-start items-center gap-3 sm:gap-6 font-body">
+          <a
+            href="https://github.com/nsafarova"
+            target="_blank"
+            className="block rounded-default px-3 py-2.5 text-lg md:text-xl text-neutral-50 dark:text-neutral-900 bg-purple-600 dark:bg-purple-200 hover:bg-purple-900 dark:hover:bg-purple-400"
+          >
+            <BsGithub />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/nssafarova/"
+            target="_blank"
+            className="block rounded-default px-3 py-2.5 text-lg md:text-xl text-neutral-50 dark:text-neutral-900 bg-purple-600 dark:bg-purple-200 hover:bg-purple-900 dark:hover:bg-purple-400"
+          >
+            <BsLinkedin />
+          </a>
+          <a
+            href="mailto:nigarsafarova@hotmail.com?subject=Mail from Nigar's Website"
+            className="block rounded-default px-4 py-2.5 font-body text-center text-2xs md:text-xs font-semibold text-neutral-900 dark:text-neutral-50 uppercase border border-purple-500 dark:border-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200"
+          >
+            Get&nbsp;in&nbsp;touch
+          </a>
+          <a
+            href="#"
+            className="invisible sm:visible block rounded-default px-4 py-2.5 font-body text-center text-2xs md:text-xs font-semibold text-neutral-900 dark:text-neutral-50 uppercase border border-purple-500 dark:border-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200"
+          >
+            Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
