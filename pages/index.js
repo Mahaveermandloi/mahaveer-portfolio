@@ -1,7 +1,11 @@
 import Navbar from "@/components/navbar";
+import ProjectCard from "@/components/projectCard";
 import Head from "next/head";
 import Image from "next/image";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import projects from "@/data/projects";
+import { useState, useEffect } from "react";
+import { FiArrowDown } from "react-icons/fi";
 
 export default function Home() {
   return (
@@ -13,9 +17,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <div className="bg-neutral-50 dark:bg-neutral-900 h-screen">
+      <div className="bg-neutral-50 dark:bg-neutral-900">
         <Navbar />
         <Hero />
+        <ScrollButton />
+        
       </div>
     </>
   );
@@ -23,7 +29,7 @@ export default function Home() {
 
 const Hero = () => {
   return (
-    <div className="max-w-5xl py-28 px-6 sm:px-16 lg:px-120 sm:py-48 lg:py-52">
+    <div className="max-w-5xl py-28 px-6 sm:px-16 lg:px-120 sm:py-44 lg:py-48">
       <div className="text-left">
         <h1 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 ">
           Hi, I&apos;m Nigar Safarova.
@@ -65,6 +71,42 @@ const Hero = () => {
           </a>
         </div>
       </div>
+    </div>
+  );
+};
+
+const Projects = () => {
+  return (
+    <div>
+      <h1 className="text-3xl font-bold mb-8 text-center">Projects</h1>
+      <div className="flex flex-wrap justify-center">
+        {projects.map((project) => (
+          <div key={project.title} className="mx-4 my-8">
+            <ProjectCard {...project} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const ScrollButton = () => {
+  const handleScrollDown = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <div className="flex justify-center items-center">
+      <button
+        onClick={handleScrollDown}
+        className="animate-bounce inline-flex items-center mb-28 px-4 text-neutral-400 transition duration-300 ease-in-out"
+      >
+        <span className="text-xs mr-2">Scroll</span>
+        <FiArrowDown className="text-lg" />
+      </button>
     </div>
   );
 };
