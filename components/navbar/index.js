@@ -8,7 +8,7 @@ import dynamic from "next/dynamic";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "Projects", href: "/projects" },
+  { name: "Projects", href: "#projects" },
   { name: "About", href: "#about" },
   { name: "Resume", href: "/public/favicon.ico" },
 ];
