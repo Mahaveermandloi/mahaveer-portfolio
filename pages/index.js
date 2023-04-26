@@ -22,6 +22,7 @@ export default function Home() {
         <Hero />
         <ScrollButton />
         <Projects />
+        <About />
       </div>
     </>
   );
@@ -109,6 +110,54 @@ const ScrollButton = () => {
         <span className="text-xs mr-2">Scroll</span>
         <FiArrowDown className="text-lg" />
       </button>
+    </div>
+  );
+};
+
+const About = () => {
+  return (
+    <div
+      id="about"
+      className="flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-52 py-20 md:py-32 px-6 sm:px-16 lg:px-120"
+    >
+      <div className="max-w-lg">
+        <h2 className="font-display text-2xl md:text-3xl font-bold mb-4 text-neutral-900 dark:text-neutral-50">
+          Hi there!
+        </h2>
+        <p className="font-body text-sm lg:text-lg mb-4 text-neutral-600 dark:text-neutral-300">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis
+          ultrices odio, vitae vestibulum tortor dignissim ut. Fusce lacinia
+          aliquet massa id bibendum. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Duis sagittis ultrices odio, vitae vestibulum tortor
+          dignissim ut. Fusce lacinia aliquet massa id bibendum.
+          <br />
+          <br />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis
+          ultrices odio, vitae vestibulum tortor dignissim ut. Fusce lacinia
+          aliquet massa id bibendum. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Duis sagittis ultrices odio, vitae vestibulum tortor
+          dignissim ut. Fusce lacinia aliquet massa id bibendum.
+        </p>
+        <Link href="/about">
+          <button className="flex items-center rounded-default font-body text-2xs md:text-xs font-semibold px-4 py-2.5 text-neutral-50 dark:text-neutral-900 uppercase bg-purple-500 dark:bg-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200">
+            Read More
+          </button>
+        </Link>
+      </div>
+      <div className="-mt-6">
+        <div className="relative">
+          <div className="absolute z-0 -left-8 -bottom-8">
+            <Image
+              src="/images/nigar.jpg"
+              alt="My Picture"
+              width={320}
+              height={500}
+              className="rounded-default"
+            />
+          </div>
+          <div className="z-10 bottom-0 left-0 rounded-default bg-purple-400 w-[320px] h-[425px]"></div>
+        </div>
+      </div>
     </div>
   );
 };
