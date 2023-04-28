@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import useColorMode from "@/hooks/useColorMode";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -116,20 +117,20 @@ const Navbar = () => {
                         <BsSunFill className="text-lg" />
                       )}
                     </button>
-                    <a
+                    <Link
                       href="https://github.com/nsafarova"
                       target="_blank"
                       className="-mx-3 block rounded-lg px-3 py-2.5 text-lg hover:bg-purple-200 dark:hover:bg-neutral-700 dark:text-neutral-50"
                     >
                       <BsGithub />
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="https://www.linkedin.com/in/nssafarova/"
                       target="_blank"
                       className="-mx-3 block rounded-default px-3 py-2.5 text-lg hover:bg-purple-200 dark:hover:bg-neutral-700 dark:text-neutral-50"
                     >
                       <BsLinkedin />
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <p className="font-body text-2xs text-neutral-400 py-10">
