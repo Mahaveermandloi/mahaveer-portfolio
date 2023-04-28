@@ -6,6 +6,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import projects from "@/data/projects";
 import { FiArrowDown } from "react-icons/fi";
 import Link from "next/link";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <ScrollButton />
         <Projects />
         <About />
+        <Footer />
       </div>
     </>
   );
