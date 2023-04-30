@@ -11,7 +11,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Projects", href: "#projects" },
   { name: "About", href: "#about" },
-  { name: "Resume", href: "/public/favicon.ico" },
+  { name: "Resume", href: "https://drive.google.com/file/d/1L5fSD_31sHEXTKsWar89GWnQwwX9fquc/view?usp=sharing" },
 ];
 
 const Navbar = () => {
