@@ -19,6 +19,14 @@ module.exports = {
       body: ["Inter", "sans-serif"],
     },
     colors: {
+      html: '#E44D26',
+      css: '#264DE4',
+      javascript: '#F7DF1E',
+      react: '#61DAFB',
+      nextjs: '#000000',
+      tailwind: '#38B2AC',
+      git: '#F05032',
+      figma: '#6D28D9',
       purple: {
         50: "#F5F3FF",
         100: "#EDE9FE",
