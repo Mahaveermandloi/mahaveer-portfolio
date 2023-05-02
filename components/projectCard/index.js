@@ -10,11 +10,11 @@ const Project = ({
   techStackIcons,
 }) => {
   return (
-    <div className="max-w-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 overflow-hidden rounded-sm">
-      <div className="relative h-72 w-full">
+    <div className="max-w-lg bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 overflow-hidden rounded-sm z-0">
+      <div className="relative h-72 w-full z-1">
         <Image src={imageUrl} alt={title} fill />
       </div>
-      <div className="px-4 py-2">
+      <div className="relative z-1 px-4 py-2 bg-neutral-50 dark:bg-neutral-900">
         <h3 className="font-display text-lg md:text-2xl text-neutral-900 dark:text-neutral-50 font-bold my-2">
           {title}
         </h3>
