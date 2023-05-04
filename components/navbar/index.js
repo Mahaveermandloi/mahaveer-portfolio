@@ -98,6 +98,7 @@ const Navbar = () => {
                       <a
                         key={item.name}
                         href={item.href}
+                        onClick={() => setMobileMenuOpen(false)}
                         className="-mx-3 block rounded-default px-3 py-2 text-base font-normal leading-7 text-neutral-900 dark:text-neutral-50 hover:bg-purple-50 dark:hover:bg-neutral-700 active:bg-purple-50 dark:active:bg-neutral-700"
                       >
                         {item.name}
