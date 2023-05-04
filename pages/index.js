@@ -71,10 +71,10 @@ const Hero = () => {
             projects, and my journey.
           </p>
           <p className="font-body mt-6 text-sm md:text-lg leading-8 text-neutral-600 dark:text-neutral-100">
-            As a developer with a keen eye for detail
-            and a thirst for knowledge, I am dedicated to creating high-quality,
-            user-friendly websites and applications on the web.
-            Feel free to browse around, and discover more about me and my areas of interest.
+            As a developer with a keen eye for detail and a thirst for
+            knowledge, I am dedicated to creating high-quality, user-friendly
+            websites and applications on the web. Feel free to browse around,
+            and discover more about me and my areas of interest.
           </p>
           <div className="mt-10 flex md:justify-center items-center gap-3 sm:gap-6 font-body">
             <Link
@@ -133,7 +133,7 @@ const Hero = () => {
                   "0 0 10px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.2)",
                 mixBlendMode: "screen",
                 transform: `rotate(${getRandomNumber(-15, 15)}deg)`,
-                zIndex: '-1'
+                zIndex: "-1",
               }}
             />
           ))}
@@ -187,27 +187,32 @@ const About = () => {
       id="about"
       className="flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-20 xl:gap-52 py-20 md:py-32 px-6 sm:px-16 lg:px-120"
     >
-      <div className="max-w-lg">
+      <div className="max-w-xl">
         <h2 className="font-display text-2xl md:text-3xl font-bold mb-4 text-neutral-900 dark:text-neutral-50">
           Hi there!
         </h2>
         <p className="font-body text-sm xl:text-lg mb-4 text-neutral-600 dark:text-neutral-300">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis
-          ultrices odio, vitae vestibulum tortor dignissim ut. Fusce lacinia
-          aliquet massa id bibendum. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Duis sagittis ultrices odio, vitae vestibulum tortor
-          dignissim ut. Fusce lacinia aliquet massa id bibendum.
+          I am Nigar (some call me Nikki😄), an IT graduate self-taught
+          Front-end Developer based in Baku, Azerbaijan. Coding is my passion,
+          and I love to tackle new challenges and find solutions for coding
+          problems. As a solution-oriented person, I am always looking for ways
+          to improve processes and create more efficient solutions. I am
+          enthusiastic about researching new technologies and discovering new
+          ideas, and my keen eye for details comes in handy while working on
+          perfecting my code.
           <br />
-          <br />
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis
-          ultrices odio, vitae vestibulum tortor dignissim ut. Fusce lacinia
-          aliquet massa id bibendum. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Duis sagittis ultrices odio, vitae vestibulum tortor
-          dignissim ut. Fusce lacinia aliquet massa id bibendum.
+          <br />I have mastered a wide range of skills, including React,
+          Tailwind CSS, and Next.js, and have received a Meta Front-end
+          Developer certificate from Coursera. In my free time, I engage in
+          activities that help me relax and recharge my batteries, such as
+          reading, meditating, and practicing yoga. I also enjoy playing arcade
+          games, drawing, and spending time with my cats. But nothing beats
+          spending time with my family and friends, whether going out for a
+          meal, watching a movie, or simply enjoying each other&apos;s company.
         </p>
         <Link href="/about">
           <button className="flex items-center rounded-default font-body text-2xs md:text-xs font-semibold px-4 py-2.5 text-neutral-50 dark:text-neutral-900 uppercase bg-purple-500 dark:bg-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200">
-            Read More
+            Read More About Me
           </button>
         </Link>
       </div>
@@ -218,7 +223,7 @@ const About = () => {
               src="/images/nigar.jpg"
               alt="My Picture"
               width={320}
-              height={500}
+              height={510}
               className="rounded-default"
             />
           </div>
