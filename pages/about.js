@@ -11,10 +11,9 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiFigma,
-  SiStorybook,
   SiGit,
 } from "react-icons/si";
-// import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default function About() {
   return (
