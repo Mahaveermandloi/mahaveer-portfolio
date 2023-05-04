@@ -57,19 +57,24 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-between py-28 px-6 sm:px-16 lg:px-120 sm:py-44 lg:py-28 2xl:py-48">
-      <div className="md:mx-auto max-w-3xl">
+    <div className="flex flex-col items-center justify-between py-20 px-6 sm:px-16 lg:px-120 sm:py-40 lg:py-28 2xl:py-48">
+      <div className="md:mx-auto max-w-4xl">
         <div className="text-left md:text-center">
-          <h1 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 ">
+          <h1 className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 ">
             Hi, I&apos;m Nigar Safarova.
           </h1>
           <h2 className="font-display text-2xl md:text-3xl font-bold text-purple-900 dark:text-purple-300">
             Front-end Developer
           </h2>
+          <p className="font-body mt-2 text-sm md:text-lg leading-8 text-neutral-600 dark:text-neutral-100">
+            Welcome to my space on the internet, where you can discover my
+            projects, and my journey.
+          </p>
           <p className="font-body mt-6 text-sm md:text-lg leading-8 text-neutral-600 dark:text-neutral-100">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat aliqua.
+            As a developer with a keen eye for detail
+            and a thirst for knowledge, I am dedicated to creating high-quality,
+            user-friendly websites and applications on the web.
+            Feel free to browse around, and discover more about me and my areas of interest.
           </p>
           <div className="mt-10 flex md:justify-center items-center gap-3 sm:gap-6 font-body">
             <Link
@@ -128,6 +133,7 @@ const Hero = () => {
                   "0 0 10px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.2)",
                 mixBlendMode: "screen",
                 transform: `rotate(${getRandomNumber(-15, 15)}deg)`,
+                zIndex: '-1'
               }}
             />
           ))}
@@ -205,7 +211,7 @@ const About = () => {
           </button>
         </Link>
       </div>
-      <div className="-mt-6">
+      <div className="-mt-6 ml-6 md:ml-0">
         <div className="relative">
           <div className="absolute z-0 -left-8 -bottom-8">
             <Image
