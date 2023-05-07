@@ -218,7 +218,7 @@ const About = () => {
       </div>
       <div className="-mt-6 ml-6 md:ml-0">
         <div className="relative">
-          <div className="absolute z-0 -left-8 -bottom-8">
+          <div className="absolute z-0 -left-7 -bottom-7">
             <Image
               src="/images/nigar.jpg"
               alt="My Picture"

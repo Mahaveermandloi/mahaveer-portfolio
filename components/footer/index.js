@@ -10,7 +10,7 @@ const Footer = () => {
           <h3 className="mb-4 lg:mb-8 font-display font-bold text-lg md:text-xl text-neutral-900 dark:text-neutral-50">
             Let&apos;s connect
           </h3>
-          <p className="font-body text-xs md:text-md text-neutral-700 dark:text-neutral-300 mt-3">
+          <p className="font-body text-xs md:text-md text-neutral-700 dark:text-neutral-300 mt-3 mx-10 md:mx-0">
             Shoot me email to chat about my work or just like to say hey 👋
           </p>
         </div>
