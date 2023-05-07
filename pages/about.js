@@ -13,9 +13,11 @@ import {
   SiFigma,
   SiGit,
 } from "react-icons/si";
+import { motion, useScroll } from "framer-motion";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default function About() {
+  const { scrollYProgress } = useScroll();
   return (
     <>
       <Head>
@@ -27,6 +29,11 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
+
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-2 bg-purple-300 z-50 origin-[0%]"
+        style={{ scaleX: scrollYProgress }}
+      />
 
       <div className="bg-neutral-50 dark:bg-neutral-900">
         <Navbar />

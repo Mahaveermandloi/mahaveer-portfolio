@@ -7,10 +7,11 @@ import projects from "@/data/projects";
 import { FiArrowDown } from "react-icons/fi";
 import Link from "next/link";
 import Footer from "@/components/footer";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { useState, useEffect } from "react";
 
 export default function Home() {
+  const { scrollYProgress } = useScroll();
   return (
     <>
       <Head>
@@ -22,6 +23,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
+
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-2 bg-purple-300 z-50 origin-[0%]"
+        style={{ scaleX: scrollYProgress }}
+      />
 
       <div className="bg-neutral-50 dark:bg-neutral-900">
         <Navbar />
@@ -146,7 +152,7 @@ const Hero = () => {
 const Projects = () => {
   return (
     <div id="projects">
-      <h1 className="font-display text-2xl md:text-4xl font-bold pb-16 text-center text-neutral-900 dark:text-neutral-50">
+      <h1 className="font-display text-3xl md:text-4xl font-bold pb-6 text-center text-neutral-900 dark:text-neutral-50">
         Projects
       </h1>
       <div className="flex flex-wrap justify-center">
@@ -212,7 +218,7 @@ const About = () => {
         </p>
         <Link href="/about">
           <button className="flex items-center rounded-default font-body text-2xs md:text-xs font-semibold px-4 py-2.5 text-neutral-50 dark:text-neutral-900 uppercase bg-purple-500 dark:bg-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200">
-            Read More About Me
+            Read More
           </button>
         </Link>
       </div>
@@ -233,3 +239,32 @@ const About = () => {
     </div>
   );
 };
+
+const ScrollAnimation = ({ children }) => {
+  const variants = {
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: 'easeOut',
+        staggerChildren: 0.2,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      y: 50,
+    },
+  }
+
+  return (
+    <motion.div
+      variants={variants}
+      initial="hidden"
+      animate="visible"
+      className="flex flex-col items-center justify-center h-screen"
+    >
+      {children}
+    </motion.div>
+  )
+}
