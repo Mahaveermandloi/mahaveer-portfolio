@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="bg-neutral-50 dark:bg-neutral-900">
         <header className="inset-x-0 top-0 z-50">
           <nav
-            className="flex items-center justify-between p-6  px-6 sm:px-16 lg:px-120"
+            className="flex items-center justify-between p-4 px-6 sm:px-16 lg:px-120"
             aria-label="Global"
           >
             <div className="flex lg:flex-1">
