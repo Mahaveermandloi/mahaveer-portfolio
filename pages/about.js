@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Image from "next/image";
 import Head from "next/head";
+import { useState, useEffect } from "react";
 import {
   SiHtml5,
   SiCss3,
@@ -13,6 +14,7 @@ import {
   SiFigma,
   SiGit,
 } from "react-icons/si";
+import {FiArrowUp} from 'react-icons/fi'
 import { motion, useScroll } from "framer-motion";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
@@ -41,6 +43,7 @@ export default function About() {
         <Skills />
         <Interests />
         <Footer />
+        <ScrollUpButton />
       </div>
     </>
   );
@@ -221,5 +224,38 @@ const Interests = () => {
         </div>
       </div>
     </section>
+  );
+};
+
+const ScrollUpButton = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight;
+      setShowButton(!isBottom && window.pageYOffset > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <button
+      className={`fixed animate-bounce bottom-4 right-4 bg-purple-400 dark:bg-purple-300 p-3 rounded-default text-neutral-50 dark:text-neutral-900 text-xl font-bold ${
+        showButton ? "opacity-100" : "opacity-0"
+      }`}
+      onClick={handleClick}
+    >
+      <FiArrowUp />
+    </button>
   );
 };

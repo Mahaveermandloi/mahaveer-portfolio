@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import projects from "@/data/projects";
-import { FiArrowDown } from "react-icons/fi";
+import { FiArrowDown, FiArrowUp } from "react-icons/fi";
 import Link from "next/link";
 import Footer from "@/components/footer";
 import { motion, useScroll } from "framer-motion";
@@ -36,6 +36,7 @@ export default function Home() {
         <Projects />
         <About />
         <Footer />
+        <ScrollUpButton />
       </div>
     </>
   );
@@ -232,31 +233,35 @@ const About = () => {
   );
 };
 
-const ScrollAnimation = ({ children }) => {
-  const variants = {
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-        staggerChildren: 0.2,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      y: 50,
-    },
+const ScrollUpButton = () => {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight;
+      setShowButton(!isBottom && window.pageYOffset > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <motion.div
-      variants={variants}
-      initial="hidden"
-      animate="visible"
-      className="flex flex-col items-center justify-center h-screen"
+    <button
+      className={`fixed animate-bounce bottom-4 right-4 bg-purple-400 dark:bg-purple-300 p-3 rounded-default text-neutral-50 dark:text-neutral-900 text-xl font-bold ${
+        showButton ? "opacity-100" : "opacity-0"
+      }`}
+      onClick={handleClick}
     >
-      {children}
-    </motion.div>
+      <FiArrowUp />
+    </button>
   );
 };
