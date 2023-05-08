@@ -197,23 +197,16 @@ const About = () => {
           Hi there!
         </h2>
         <p className="font-body text-sm xl:text-lg mb-4 text-neutral-600 dark:text-neutral-300">
-          I am Nigar (some call me Nikki😄), an IT graduate self-taught
+          I am Nigar (some call me Nikki😄), an IT graduate and self-taught
           Front-end Developer based in Baku, Azerbaijan. Coding is my passion,
-          and I love to tackle new challenges and find solutions for coding
-          problems. As a solution-oriented person, I am always looking for ways
-          to improve processes and create more efficient solutions. I am
-          enthusiastic about researching new technologies and discovering new
-          ideas, and my keen eye for details comes in handy while working on
-          perfecting my code.
+          and I love to tackle new challenges and find solutions. I am
+          enthusiastic about discovering new technologies and ideas, and my keen
+          eye for details helps me perfect my code.
           <br />
-          <br />I have mastered a wide range of skills, including React,
-          Tailwind CSS, and Next.js, and have received a Meta Front-end
-          Developer certificate from Coursera. In my free time, I engage in
-          activities that help me relax and recharge my batteries, such as
-          reading, meditating, and practicing yoga. I also enjoy playing arcade
-          games, drawing, and spending time with my cats. But nothing beats
-          spending time with my family and friends, whether going out for a
-          meal, watching a movie, or simply enjoying each other&apos;s company.
+          <br />I am skilled in React, Tailwind CSS, and Next.js, and received a
+          Meta Front-end Developer certificate from Coursera. In my free time, I
+          relax with activities like reading, meditating, yoga, and drawing, or
+          spend time with family, friends, and my cats.
         </p>
         <Link href="/about">
           <button className="flex items-center rounded-default font-body text-2xs md:text-xs font-semibold px-4 py-2.5 text-neutral-50 dark:text-neutral-900 uppercase bg-purple-500 dark:bg-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200">
@@ -246,7 +239,7 @@ const ScrollAnimation = ({ children }) => {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: 'easeOut',
+        ease: "easeOut",
         staggerChildren: 0.2,
       },
     },
@@ -254,7 +247,7 @@ const ScrollAnimation = ({ children }) => {
       opacity: 0,
       y: 50,
     },
-  }
+  };
 
   return (
     <motion.div
@@ -265,5 +258,5 @@ const ScrollAnimation = ({ children }) => {
     >
       {children}
     </motion.div>
-  )
-}
+  );
+};
