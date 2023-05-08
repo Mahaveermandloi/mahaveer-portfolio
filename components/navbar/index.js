@@ -1,17 +1,25 @@
-import Image from "next/image";
-import { FiMenu, FiX } from "react-icons/fi";
-import { BsSunFill, BsMoonStarsFill, BsGithub, BsLinkedin } from "react-icons/bs";
 import { useState } from "react";
+import Link from "next/link";
+import { FiMenu, FiX } from "react-icons/fi";
+import {
+  BsSunFill,
+  BsMoonStarsFill,
+  BsGithub,
+  BsLinkedin,
+} from "react-icons/bs";
 import { Dialog } from "@headlessui/react";
 import useColorMode from "@/hooks/useColorMode";
 import dynamic from "next/dynamic";
-import Link from "next/link";
+import { motion } from "framer-motion";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Projects", href: "#projects" },
   { name: "About", href: "#about" },
-  { name: "Resume", href: "https://drive.google.com/file/d/1L5fSD_31sHEXTKsWar89GWnQwwX9fquc/view?usp=sharing" },
+  {
+    name: "Resume",
+    href: "https://drive.google.com/file/d/1L5fSD_31sHEXTKsWar89GWnQwwX9fquc/view?usp=sharing",
+  },
 ];
 
 const Navbar = () => {
@@ -26,13 +34,18 @@ const Navbar = () => {
             className="flex items-center justify-between p-4 px-6 sm:px-16 lg:px-120"
             aria-label="Global"
           >
-            <div className="flex lg:flex-1">
+            <motion.div
+              initial={{ y: -100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 100, delay: 0.4 }}
+              className="flex lg:flex-1"
+            >
               <a href="#" className="-m-1.5 p-1.5">
                 <h3 className="font-body text-4xl font-bold dark:text-neutral-50">
                   ns<span className="text-purple-500">.</span>
                 </h3>
               </a>
-            </div>
+            </motion.div>
             <div className="flex lg:hidden">
               <button
                 type="button"
@@ -40,7 +53,10 @@ const Navbar = () => {
                 onClick={() => setMobileMenuOpen(true)}
               >
                 <span className="sr-only">Open main menu</span>
-                <FiMenu className="h-6 w-6 text-neutral-800 dark:text-neutral-50" aria-hidden="true" />
+                <FiMenu
+                  className="h-6 w-6 text-neutral-800 dark:text-neutral-50"
+                  aria-hidden="true"
+                />
               </button>
             </div>
             <div className="hidden lg:flex lg:gap-x-12">
@@ -75,7 +91,7 @@ const Navbar = () => {
             onClose={setMobileMenuOpen}
           >
             <div className="fixed inset-0 z-50" />
-            <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-neutral-50 dark:bg-neutral-900 px-6 sm:px-16 md:px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10 dark:sm:ring-neutral-800">
+            <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-neutral-50 dark:bg-neutral-900 px-6 sm:px-16 md:px-6 py-4 sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10 dark:sm:ring-neutral-800">
               <div className="flex items-center justify-between">
                 <a href="#" className="-m-1.5 p-1.5">
                   <h3 className="font-body text-4xl font-bold text-neutral-900 dark:text-neutral-50">
@@ -144,7 +160,6 @@ const Navbar = () => {
       </div>
     </>
   );
-}
+};
 
-export default dynamic (() => Promise.resolve(Navbar), {ssr: false})
-
+export default dynamic(() => Promise.resolve(Navbar), { ssr: false });
