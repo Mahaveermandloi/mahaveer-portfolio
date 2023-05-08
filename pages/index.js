@@ -63,7 +63,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-between py-16 px-6 sm:px-16 lg:px-120 sm:py-40 lg:py-28 2xl:py-48">
+    <div className="flex flex-col items-center justify-between py-12 px-6 sm:px-16 lg:px-120 sm:py-40 lg:py-28 2xl:py-48">
       <div className="md:mx-auto max-w-4xl">
         <div className="text-left md:text-center">
           <h1 className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 ">
@@ -72,7 +72,7 @@ const Hero = () => {
           <h2 className="font-display text-2xl md:text-3xl font-bold text-purple-900 dark:text-purple-300">
             Front-end Developer
           </h2>
-          <p className="font-body mt-2 text-sm md:text-lg leading-8 text-neutral-600 dark:text-neutral-100">
+          <p className="font-body mt-2 text-sm md:text-lg leading-4 text-neutral-600 dark:text-neutral-100">
             Welcome to my space on the internet!
           </p>
           <p className="font-body mt-6 text-sm md:text-lg leading-8 text-neutral-600 dark:text-neutral-100">
