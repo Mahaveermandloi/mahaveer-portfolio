@@ -35,9 +35,9 @@ const Navbar = () => {
             aria-label="Global"
           >
             <motion.div
-              initial={{ y: -100, opacity: 0 }}
+              initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ type: "spring", stiffness: 100, delay: 0.4 }}
+              transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
               className="flex lg:flex-1"
             >
               <a href="#" className="-m-1.5 p-1.5">
