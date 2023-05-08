@@ -73,8 +73,7 @@ const Hero = () => {
             Front-end Developer
           </h2>
           <p className="font-body mt-2 text-sm md:text-lg leading-8 text-neutral-600 dark:text-neutral-100">
-            Welcome to my space on the internet, where you can discover my
-            projects, and my journey.
+            Welcome to my space on the internet!
           </p>
           <p className="font-body mt-6 text-sm md:text-lg leading-8 text-neutral-600 dark:text-neutral-100">
             As a developer with a keen eye for detail and a thirst for
