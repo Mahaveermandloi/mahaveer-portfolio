@@ -1,5 +1,9 @@
 import { useState } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+import { useTheme } from "next-themes";
+import { Dialog } from "@headlessui/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
 import {
   BsSunFill,
@@ -7,10 +11,6 @@ import {
   BsGithub,
   BsLinkedin,
 } from "react-icons/bs";
-import { Dialog } from "@headlessui/react";
-import useColorMode from "@/hooks/useColorMode";
-import dynamic from "next/dynamic";
-import { AnimatePresence, motion } from "framer-motion";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -24,7 +24,12 @@ const navigation = [
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [colorMode, setColorMode] = useColorMode();
+  const { theme, setTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+    document.documentElement.classList.toggle("dark");
+  };
 
   return (
     <>
@@ -71,11 +76,10 @@ const Navbar = () => {
               ))}
               <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center text-neutral-900 dark:text-neutral-50">
                 <button
-                  onClick={() =>
-                    setColorMode(colorMode === "light" ? "dark" : "light")
+                  onClick={toggleTheme
                   }
                 >
-                  {colorMode === "light" ? (
+                  {theme === "light" ? (
                     <BsMoonStarsFill className="text-lg" />
                   ) : (
                     <BsSunFill className="text-lg" />
@@ -93,7 +97,7 @@ const Navbar = () => {
             >
               <div className="fixed inset-0 z-50" />
               <Dialog.Panel
-                as={motion.div} // Wrap with motion.div
+                as={motion.div}
                 initial="closed"
                 animate="open"
                 exit="closed"
@@ -139,11 +143,10 @@ const Navbar = () => {
                     <div className="flex flex-row justify-start gap-10 py-6">
                       <button
                         className="-mx-3 block rounded-default px-3 py-2.5 text-lg text-neutral-900 dark:text-neutral-50 hover:bg-purple-200 dark:hover:bg-neutral-700"
-                        onClick={() =>
-                          setColorMode(colorMode === "light" ? "dark" : "light")
+                        onClick={toggleTheme
                         }
                       >
-                        {colorMode === "light" ? (
+                        {theme === "light" ? (
                           <BsMoonStarsFill className="text-lg" />
                         ) : (
                           <BsSunFill className="text-lg" />
