@@ -14,10 +14,6 @@ module.exports = {
       xl: "1280px",
       "2xl": "1536px",
     },
-    fontFamily: {
-      display: ["Sora", "sans-serif"],
-      body: ["Inter", "sans-serif"],
-    },
     colors: {
       html: '#E44D26',
       css: '#264DE4',
@@ -65,6 +61,10 @@ module.exports = {
       "5xl": "3.5rem",
     },
     extend: {
+      fontFamily: {
+        display: ["Sora", "sans-serif"],
+        body: ["Inter", "sans-serif"],
+      },
       spacing: {
         24: "1.5rem",
         120: "7.5rem",
