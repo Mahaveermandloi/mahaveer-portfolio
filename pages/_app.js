@@ -4,7 +4,7 @@ import '../styles/fonts.css';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider defaultTheme="light" attribute="class">
+    <ThemeProvider defaultTheme="light" attribute="class" exclude={[/fonts\.css$/]}>
       <Component {...pageProps} />
     </ThemeProvider>
   );
