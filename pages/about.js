@@ -14,7 +14,7 @@ import {
   SiFigma,
   SiGit,
 } from "react-icons/si";
-import {FiArrowUp} from 'react-icons/fi'
+import { FiArrowUp } from "react-icons/fi";
 import { motion, useScroll } from "framer-motion";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
@@ -24,12 +24,7 @@ export default function About() {
     <>
       <Head>
         <title>Nigar Safarova | About Me</title>
-        <meta
-          name="description"
-          content="Hi, I'm Nigar, Front-end Dev and this is my portfolio website."
-        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <motion.div

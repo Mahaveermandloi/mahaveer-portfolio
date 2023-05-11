@@ -15,13 +15,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nigar Safarova</title>
-        <meta
-          name="description"
-          content="Hi, I'm Nigar, Front-end Dev and this is my portfolio website."
-        />
+        <title>Nigar Safarova | Front-end Dev</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <motion.div
@@ -76,7 +71,7 @@ const Hero = () => {
           <p className="font-body mt-2 text-sm md:text-lg leading-4 text-neutral-600 dark:text-neutral-100">
             Welcome to my space on the internet!
           </p>
-          <p className="font-body mt-6 text-sm md:text-lg leading-8 text-neutral-600 dark:text-neutral-100">
+          <p className="font-body mt-6 text-sm md:text-base leading-8 text-neutral-600 dark:text-neutral-100">
             As a developer with a keen eye for detail and a thirst for
             knowledge, I am dedicated to creating high-quality, user-friendly
             websites and applications on the web. Feel free to browse around,
@@ -166,27 +161,6 @@ const Projects = () => {
   );
 };
 
-const ScrollButton = () => {
-  const handleScrollDown = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth",
-    });
-  };
-
-  return (
-    <div className="flex justify-center items-center">
-      <button
-        onClick={handleScrollDown}
-        className="animate-bounce inline-flex items-center mb-28 px-4 text-neutral-400 transition duration-300 ease-in-out"
-      >
-        <span className="text-xs mr-2">Scroll</span>
-        <FiArrowDown className="text-lg" />
-      </button>
-    </div>
-  );
-};
-
 const About = () => {
   return (
     <div
@@ -229,6 +203,27 @@ const About = () => {
           <div className="z-10 bottom-0 left-0 rounded-default bg-purple-400 w-[320px] h-[425px]"></div>
         </div>
       </div>
+    </div>
+  );
+};
+
+const ScrollButton = () => {
+  const handleScrollDown = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <div className="flex justify-center items-center">
+      <button
+        onClick={handleScrollDown}
+        className="animate-bounce inline-flex items-center mb-28 px-4 text-neutral-400 transition duration-300 ease-in-out"
+      >
+        <span className="text-xs mr-2">Scroll</span>
+        <FiArrowDown className="text-lg" />
+      </button>
     </div>
   );
 };
