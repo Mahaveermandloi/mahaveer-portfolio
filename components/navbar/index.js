@@ -18,7 +18,7 @@ const navigation = [
   { name: "About", href: "#about" },
   {
     name: "Resume",
-    href: "https://drive.google.com/file/d/1L5fSD_31sHEXTKsWar89GWnQwwX9fquc/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1oRDHl8FYmqug9v55gH9YINM6BjSwFejo/view?usp=sharing",
   },
 ];
 

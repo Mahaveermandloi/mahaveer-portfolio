@@ -99,7 +99,8 @@ const Hero = () => {
               Get&nbsp;in&nbsp;touch
             </Link>
             <Link
-              href="https://drive.google.com/file/d/1L5fSD_31sHEXTKsWar89GWnQwwX9fquc/view?usp=sharing"
+              href="https://drive.google.com/file/d/1oRDHl8FYmqug9v55gH9YINM6BjSwFejo/view?usp=sharing"
+              target="_blank"
               className="invisible sm:visible block rounded-default px-4 py-2.5 font-body text-center text-2xs md:text-xs font-semibold text-neutral-900 dark:text-neutral-50 uppercase border border-purple-500 dark:border-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200"
             >
               Resume
