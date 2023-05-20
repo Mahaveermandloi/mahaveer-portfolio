@@ -68,7 +68,7 @@ const Hero = () => {
           <h2 className="font-display text-2xl md:text-3xl font-bold text-purple-900 dark:text-purple-300">
             Front-end Developer
           </h2>
-          <p className="font-body mt-2 text-sm md:text-lg leading-4 text-neutral-600 dark:text-neutral-100">
+          <p className="font-body mt-6 text-sm md:text-lg leading-4 text-neutral-600 dark:text-neutral-100">
             Welcome to my space on the internet!
           </p>
           <p className="font-body mt-6 text-sm md:text-base leading-8 text-neutral-600 dark:text-neutral-100">
