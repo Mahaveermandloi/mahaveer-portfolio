@@ -16,6 +16,12 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: nextjs-static
+          path: output.zip
+
       - name: Install Dependencies
         run: npm install
 
@@ -24,9 +30,3 @@ jobs:
 
       - name: Zip Static Output
         run: zip -r output.zip out
-
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: nextjs-static
-          path: output.zip
