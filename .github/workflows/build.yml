@@ -22,5 +22,11 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Zip Build Output
-        run: zip -r output.zip build
+      - name: Zip Static Output
+        run: zip -r output.zip out
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: nextjs-static
+          path: output.zip
