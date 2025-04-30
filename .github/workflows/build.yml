@@ -20,13 +20,13 @@ jobs:
         run: npm install
 
       - name: Build Project
-        run: npm run build
+        run: NODE_ENV=production npm run build
 
       - name: Zip Static Output
         run: zip -r output.zip out
 
       - name: Upload Build Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: nextjs-static
           path: output.zip
