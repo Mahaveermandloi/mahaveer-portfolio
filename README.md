@@ -1,4 +1,4 @@
-# My Portfolio Website - Nigar Safarova
+# My Portfolio Website - Mahaveer Mandloi
 
 [![Made with Love](https://img.shields.io/badge/Made_with-Love-E0115F.svg?style=flat&logo=heart)]()
 [![Built with Next.js](https://img.shields.io/badge/Built_with-Next.js-000000.svg?style=flat&logo=next.js)](https://nextjs.org/)
