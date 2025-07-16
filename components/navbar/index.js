@@ -18,7 +18,7 @@ const navigation = [
   { name: "About", href: "#about" },
   {
     name: "Resume",
-    href: "https://drive.google.com/file/d/1oRDHl8FYmqug9v55gH9YINM6BjSwFejo/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1mOgKJuncRJkeHRy6MSccTSCOolwCwc73/view?usp=sharing",
   },
 ];
 
@@ -47,7 +47,7 @@ const Navbar = () => {
             >
               <a href="#" className="-m-1.5 p-1.5">
                 <h3 className="font-body text-4xl font-bold dark:text-neutral-50">
-                  ns<span className="text-purple-500">.</span>
+                  mm<span className="text-purple-500">.</span>
                 </h3>
               </a>
             </motion.div>
@@ -75,10 +75,7 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center text-neutral-900 dark:text-neutral-50">
-                <button
-                  onClick={toggleTheme
-                  }
-                >
+                <button onClick={toggleTheme}>
                   {theme === "light" ? (
                     <BsMoonStarsFill className="text-lg" />
                   ) : (
@@ -89,91 +86,92 @@ const Navbar = () => {
             </div>
           </nav>
           <AnimatePresence>
-            {mobileMenuOpen && (<Dialog
-              as={motion.div}
-              className="lg:hidden"
-              open={mobileMenuOpen}
-              onClose={setMobileMenuOpen}
-            >
-              <div className="fixed inset-0 z-50" />
-              <Dialog.Panel
+            {mobileMenuOpen && (
+              <Dialog
                 as={motion.div}
-                initial="closed"
-                animate="open"
-                exit="closed"
-                variants={{
-                  open: { x: 0 },
-                  closed: { x: "100%" },
-                }}
-                transition={{
-                  duration: 0.3,
-                  ease: "easeInOut",
-                }}
-                className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-neutral-50 dark:bg-neutral-900 px-6 sm:px-16 md:px-6 py-4 sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10 dark:sm:ring-neutral-800"
+                className="lg:hidden"
+                open={mobileMenuOpen}
+                onClose={setMobileMenuOpen}
               >
-                <div className="flex items-center justify-between">
-                  <a href="#" className="-m-1.5 p-1.5">
-                    <h3 className="font-body text-4xl font-bold text-neutral-900 dark:text-neutral-50">
-                      ns<span className="text-purple-500">.</span>
-                    </h3>
-                  </a>
-                  <button
-                    type="button"
-                    className="-m-2.5 rounded-default p-2.5 text-neutral-700 dark:text-neutral-300"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    <span className="sr-only">Close menu</span>
-                    <FiX className="h-6 w-6" aria-hidden="true" />
-                  </button>
-                </div>
-                <div className="mt-6 flow-root">
-                  <div className="-my-6 divide-y divide-neutral-500/10 dark:divide-neutral-700">
-                    <div className="space-y-2 py-6">
-                      {navigation.map((item) => (
-                        <a
-                          key={item.name}
-                          href={item.href}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className="-mx-3 block rounded-default px-3 py-2 text-base font-normal leading-7 text-neutral-900 dark:text-neutral-50 hover:bg-purple-50 dark:hover:bg-neutral-700 active:bg-purple-50 dark:active:bg-neutral-700"
-                        >
-                          {item.name}
-                        </a>
-                      ))}
-                    </div>
-                    <div className="flex flex-row justify-start gap-10 py-6">
-                      <button
-                        className="-mx-3 block rounded-default px-3 py-2.5 text-lg text-neutral-900 dark:text-neutral-50 hover:bg-purple-200 dark:hover:bg-neutral-700"
-                        onClick={toggleTheme
-                        }
-                      >
-                        {theme === "light" ? (
-                          <BsMoonStarsFill className="text-lg" />
-                        ) : (
-                          <BsSunFill className="text-lg" />
-                        )}
-                      </button>
-                      <Link
-                        href="https://github.com/nsafarova"
-                        target="_blank"
-                        className="-mx-3 block rounded-lg px-3 py-2.5 text-lg hover:bg-purple-200 dark:hover:bg-neutral-700 dark:text-neutral-50"
-                      >
-                        <BsGithub />
-                      </Link>
-                      <Link
-                        href="https://www.linkedin.com/in/nssafarova/"
-                        target="_blank"
-                        className="-mx-3 block rounded-default px-3 py-2.5 text-lg hover:bg-purple-200 dark:hover:bg-neutral-700 dark:text-neutral-50"
-                      >
-                        <BsLinkedin />
-                      </Link>
-                    </div>
+                <div className="fixed inset-0 z-50" />
+                <Dialog.Panel
+                  as={motion.div}
+                  initial="closed"
+                  animate="open"
+                  exit="closed"
+                  variants={{
+                    open: { x: 0 },
+                    closed: { x: "100%" },
+                  }}
+                  transition={{
+                    duration: 0.3,
+                    ease: "easeInOut",
+                  }}
+                  className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-neutral-50 dark:bg-neutral-900 px-6 sm:px-16 md:px-6 py-4 sm:max-w-sm sm:ring-1 sm:ring-neutral-900/10 dark:sm:ring-neutral-800"
+                >
+                  <div className="flex items-center justify-between">
+                    <a href="#" className="-m-1.5 p-1.5">
+                      <h3 className="font-body text-4xl font-bold text-neutral-900 dark:text-neutral-50">
+                        ns<span className="text-purple-500">.</span>
+                      </h3>
+                    </a>
+                    <button
+                      type="button"
+                      className="-m-2.5 rounded-default p-2.5 text-neutral-700 dark:text-neutral-300"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      <span className="sr-only">Close menu</span>
+                      <FiX className="h-6 w-6" aria-hidden="true" />
+                    </button>
                   </div>
-                  <p className="font-body text-2xs text-neutral-400 py-10">
-                    &copy; Designed and coded by Nigar Safarova 💜
-                  </p>
-                </div>
-              </Dialog.Panel>
-            </Dialog>)}
+                  <div className="mt-6 flow-root">
+                    <div className="-my-6 divide-y divide-neutral-500/10 dark:divide-neutral-700">
+                      <div className="space-y-2 py-6">
+                        {navigation.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="-mx-3 block rounded-default px-3 py-2 text-base font-normal leading-7 text-neutral-900 dark:text-neutral-50 hover:bg-purple-50 dark:hover:bg-neutral-700 active:bg-purple-50 dark:active:bg-neutral-700"
+                          >
+                            {item.name}
+                          </a>
+                        ))}
+                      </div>
+                      <div className="flex flex-row justify-start gap-10 py-6">
+                        <button
+                          className="-mx-3 block rounded-default px-3 py-2.5 text-lg text-neutral-900 dark:text-neutral-50 hover:bg-purple-200 dark:hover:bg-neutral-700"
+                          onClick={toggleTheme}
+                        >
+                          {theme === "light" ? (
+                            <BsMoonStarsFill className="text-lg" />
+                          ) : (
+                            <BsSunFill className="text-lg" />
+                          )}
+                        </button>
+                        <Link
+                          href="https://github.com/nsafarova"
+                          target="_blank"
+                          className="-mx-3 block rounded-lg px-3 py-2.5 text-lg hover:bg-purple-200 dark:hover:bg-neutral-700 dark:text-neutral-50"
+                        >
+                          <BsGithub />
+                        </Link>
+                        <Link
+                          href="https://www.linkedin.com/in/nssafarova/"
+                          target="_blank"
+                          className="-mx-3 block rounded-default px-3 py-2.5 text-lg hover:bg-purple-200 dark:hover:bg-neutral-700 dark:text-neutral-50"
+                        >
+                          <BsLinkedin />
+                        </Link>
+                      </div>
+                    </div>
+                    <p className="font-body text-2xs text-neutral-400 py-10">
+                      &copy; Designed and coded by Mahaveer Mandloi 💜
+                    </p>
+                  </div>
+                </Dialog.Panel>
+              </Dialog>
+            )}
           </AnimatePresence>
         </header>
       </div>

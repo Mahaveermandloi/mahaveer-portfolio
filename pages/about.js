@@ -23,7 +23,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>Nigar Safarova | About Me</title>
+        <title>Mahaveer Mandloi | About Me</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -54,9 +54,9 @@ const Intro = () => {
         <div className="md:w-1/3 mb-6 md:mb-0">
           <div className="flex justify-center sm:justify-start">
             <Image
-              src="/images/nigar.jpg"
+              src="/images/image1.jpg"
               alt="My photo"
-              width={320}
+              width={500}
               height={500}
               responsive
               className="mx-auto sm:ml-0"
@@ -65,16 +65,14 @@ const Intro = () => {
         </div>
         <div className="md:w-2/3 md:pl-10">
           <p className="font-body text-sm md:text-base text-neutral-700 dark:text-neutral-100 mb-2">
-            Nice to meet you! My name is Nigar, I am an IT graduate and
-            Front-end Developer based in Baku, Azerbaijan. I am very passionate
-            about technology and everything that surrounds it. From gadgets to
-            software, I am always up-to-date on the latest trends and
-            advancements in the tech industry. Coding is my absolute favorite
-            thing to do! It is a way for me to express my creativity while at
-            the same time - solving problems. I am always looking for new
-            challenges to test my skills and develop myself in finding solutions
-            for different coding problems.
+            I'm Mahaveer Mandloi, a Computer Science graduate from NMIMS (CGPA
+            3.68/4) with experience in full-stack web development and a strong
+            interest in cloud security and scalable systems. At KPMG, I worked
+            on cybersecurity compliance projects involving GDPR, DPDPA, and ISO
+            standards. My tech stack includes React.js, Node.js, Express,
+            MongoDB, Tailwind CSS, and Java.
           </p>
+
           <p className="font-body text-sm md:text-base text-neutral-700 dark:text-neutral-100 mb-4">
             I am a solution-oriented person. I always look for ways to improve
             processes and create more efficient solutions. Whether it&apos;s a

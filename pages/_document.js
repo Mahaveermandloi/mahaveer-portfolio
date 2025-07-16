@@ -6,18 +6,18 @@ export default function Document() {
       <Head>
         <meta
           name="description"
-          content="As a developer with a keen eye for detail and a thirst for knowledge, I am dedicated to creating high-quality, user-friendly websites and applications on the web."
+          content="A passionate full-stack developer with a keen eye for detail and a drive to build secure, scalable, and user-centric web applications. Currently interning at KPMG in the Cyber Strategy & Governance team."
         />
         <meta
           name="keywords"
           content="frontend developer, react, next.js, portfolio, web development"
         />
-        <meta name="author" content="Nigar Safarova" />
+        <meta name="author" content="Mahaveer Mandloi" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Nigar Safarova" />
+        <meta property="og:title" content="Mahaveer Mandloi" />
         <meta
           property="og:description"
-          content="As a developer with a keen eye for detail and a thirst for knowledge, I am dedicated to creating high-quality, user-friendly websites and applications on the web."
+          content="A passionate full-stack developer with a keen eye for detail and a drive to build secure, scalable, and user-centric web applications. Currently interning at KPMG in the Cyber Strategy & Governance team."
         />
         <meta property="og:image" content="/images/nigar.jpg" />
         <link rel="icon" href="/favicon.png" />

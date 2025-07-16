@@ -16,12 +16,12 @@ const Footer = () => {
         </div>
         <div className="flex flex-col items-center gap-4">
           <div className="flex items-center space-x-4 pt-5">
-            <Link href="mailto:nigarsafarova@hotmail.com?subject=Mail from Nigar's Website">
+            <Link href="mailto:mahaveermandloi9@gmail.com?subject=Mail from Mahaveer's Portfolio">
               <button className="block rounded-default px-3 py-2.5 text-lg lg:text-xl text-neutral-50 dark:text-neutral-900 bg-neutral-900 dark:bg-neutral-50">
                 <FiMail />
               </button>
             </Link>
-            <Link href="https://github.com/nsafarova">
+            <Link href="https://github.com/mahaveermandloi">
               <button
                 target="_blank"
                 rel="noopener noreferrer"
@@ -30,7 +30,7 @@ const Footer = () => {
                 <BsGithub />
               </button>
             </Link>
-            <Link href="https://www.linkedin.com/in/nssafarova/">
+            <Link href="https://www.linkedin.com/in/mahaveer-mandloi/">
               <button
                 target="_blank"
                 rel="noopener noreferrer"
@@ -50,8 +50,8 @@ const Footer = () => {
       </div>
       <div className="max-w-screen-xl mx-auto text-center mt-6 lg:mt-10 text-neutral-600 dark:text-neutral-300">
         <p className="text-2xs lg:text-xs">
-          &copy; {new Date().getFullYear()} Designed and coded by Nigar Safarova
-          💜
+          &copy; {new Date().getFullYear()} Designed and coded by Mahaveer
+          Mandloi 💜
         </p>
       </div>
     </footer>

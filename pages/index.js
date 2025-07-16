@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Nigar Safarova | Front-end Dev</title>
+        <title>Mahaveer Mandloi | Front-end Dev</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -62,44 +62,48 @@ const Hero = () => {
     <div className="flex flex-col items-center justify-between py-12 px-6 sm:px-16 lg:px-120 sm:py-40 lg:py-28 2xl:py-48">
       <div className="md:mx-auto max-w-4xl">
         <div className="text-left md:text-center">
-          <h1 className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50 ">
-            Hi, I&apos;m Nigar Safarova.
+          <h1 className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
+            Hi, I&apos;m Mahaveer Mandloi.
           </h1>
           <h2 className="font-display text-2xl md:text-3xl font-bold text-purple-900 dark:text-purple-300">
-            Front-end Developer
+            Full Stack Developer • Analyst • Lifelong Learner
           </h2>
           <p className="font-body mt-6 text-sm md:text-lg leading-4 text-neutral-600 dark:text-neutral-100">
             Welcome to my space on the internet!
           </p>
           <p className="font-body mt-6 text-sm md:text-base leading-8 text-neutral-600 dark:text-neutral-100">
-            As a developer with a keen eye for detail and a thirst for
-            knowledge, I am dedicated to creating high-quality, user-friendly
-            websites and applications on the web. Feel free to browse around,
-            and discover more about me and my areas of interest.
+            I'm a passionate Developer and Analyst with a strong foundation in
+            Computer Science. As a curious student and constant learner, I
+            thrive on exploring new technologies and solving real-world
+            problems. I enjoy blending logic with creativity to build
+            responsive, user-friendly web applications. With a detail-oriented
+            mindset and a love for clean, efficient code, I aim to grow through
+            challenges and contribute to impactful tech solutions.
           </p>
+
           <div className="mt-10 flex md:justify-center items-center gap-3 sm:gap-6 font-body">
             <Link
-              href="https://github.com/nsafarova"
+              href="https://github.com/mahaveermandloi"
               target="_blank"
               className="block rounded-default px-3 py-2.5 text-lg md:text-xl text-neutral-50 dark:text-neutral-900 bg-purple-600 dark:bg-purple-200 hover:bg-purple-900 dark:hover:bg-purple-400"
             >
               <BsGithub />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/nssafarova/"
+              href="https://www.linkedin.com/in/mahaveer-mandloi/"
               target="_blank"
               className="block rounded-default px-3 py-2.5 text-lg md:text-xl text-neutral-50 dark:text-neutral-900 bg-purple-600 dark:bg-purple-200 hover:bg-purple-900 dark:hover:bg-purple-400"
             >
               <BsLinkedin />
             </Link>
             <Link
-              href="mailto:nigarsafarova@hotmail.com?subject=Mail from Nigar's Website"
+              href="mailto:mahaveermandloi9@gmail.com?subject=Mail from Mahaveer's Mandloi Platform Website"
               className="block rounded-default px-4 py-2.5 font-body text-center text-2xs md:text-xs font-semibold text-neutral-900 dark:text-neutral-50 uppercase border border-purple-500 dark:border-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200"
             >
               Get&nbsp;in&nbsp;touch
             </Link>
             <Link
-              href="https://drive.google.com/file/d/1oRDHl8FYmqug9v55gH9YINM6BjSwFejo/view?usp=sharing"
+              href="https://drive.google.com/file/u/1/d/1mOgKJuncRJkeHRy6MSccTSCOolwCwc73/view?usp=sharing"
               target="_blank"
               className="invisible sm:visible block rounded-default px-4 py-2.5 font-body text-center text-2xs md:text-xs font-semibold text-neutral-900 dark:text-neutral-50 uppercase border border-purple-500 dark:border-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200"
             >
@@ -172,18 +176,25 @@ const About = () => {
         <h2 className="font-display text-2xl md:text-3xl font-bold mb-4 text-neutral-900 dark:text-neutral-50">
           Hi there!
         </h2>
+
         <p className="font-body text-sm xl:text-lg mb-4 text-neutral-600 dark:text-neutral-300">
-          I am Nigar (some call me Nikki😄), an IT graduate and self-taught
-          Front-end Developer based in Baku, Azerbaijan. Coding is my passion,
-          and I love to tackle new challenges and find solutions. I am
-          enthusiastic about discovering new technologies and ideas, and my keen
-          eye for details helps me perfect my code.
+          I’m
+          <span className="font-bold"> Mahaveer Mandloi</span>, a Computer
+          Science graduate and passionate Full-Stack Developer based in India.
+          Currently working as an Analyst Intern at
+          <span className=" text-purple-500 font-bold"> KPMG</span>, I enjoy
+          building clean, efficient, and user-friendly web applications. I
+          thrive on solving real-world challenges and continuously expanding my
+          skills.
           <br />
-          <br />I am skilled in React, Tailwind CSS, and Next.js, and received a
-          Meta Front-end Developer certificate from Coursera. In my free time, I
-          relax with activities like reading, meditating, yoga, and drawing, or
-          spend time with family, friends, and my cats.
+          <br />
+          I’m skilled in React, Node.js, Express, MongoDB, and Tailwind CSS,
+          with growing experience in Next.js. I take pride in writing clean
+          code, learning new technologies, and contributing to projects that
+          make an impact. Outside of work, I enjoy exploring tech trends,
+          collaborating on new ideas, and staying curious every day.
         </p>
+
         <Link href="/about">
           <button className="flex items-center rounded-default font-body text-2xs md:text-xs font-semibold px-4 py-2.5 text-neutral-50 dark:text-neutral-900 uppercase bg-purple-500 dark:bg-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200">
             Read More
@@ -194,7 +205,7 @@ const About = () => {
         <div className="relative">
           <div className="absolute z-0 -left-7 -bottom-7">
             <Image
-              src="/images/nigar.jpg"
+              src="/images/image1.jpg"
               alt="My Picture"
               width={320}
               height={510}
