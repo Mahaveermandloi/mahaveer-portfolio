@@ -9,9 +9,11 @@ import Link from "next/link";
 import Footer from "@/components/footer";
 import { motion, useScroll } from "framer-motion";
 import { useState, useEffect } from "react";
+import Experience from "./experience";
 
-export default function Home() {
+const Home = () => {
   const { scrollYProgress } = useScroll();
+
   return (
     <>
       <Head>
@@ -28,6 +30,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <ScrollButton />
+        <Experience />
         <Projects />
         <About />
         <Footer />
@@ -35,14 +38,17 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+
+export default Home;
+
+// ---------------------- Subcomponents ----------------------
 
 const Hero = () => {
   const [bubbles, setBubbles] = useState([]);
 
-  const getRandomNumber = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  };
+  const getRandomNumber = (min, max) =>
+    Math.floor(Math.random() * (max - min + 1)) + min;
 
   useEffect(() => {
     const numBubbles = 16;
@@ -63,7 +69,7 @@ const Hero = () => {
       <div className="md:mx-auto max-w-4xl">
         <div className="text-left md:text-center">
           <h1 className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
-            Hi, I&apos;m Mahaveer Mandloi.
+            Hi, I&apos;m Mahaveer Singh Mandloi.
           </h1>
           <h2 className="font-display text-2xl md:text-3xl font-bold text-purple-900 dark:text-purple-300">
             Full Stack Developer • Analyst • Lifelong Learner
@@ -149,75 +155,67 @@ const Hero = () => {
   );
 };
 
-const Projects = () => {
-  return (
-    <div id="projects">
-      <h1 className="font-display text-3xl md:text-4xl font-bold pb-6 text-center text-neutral-900 dark:text-neutral-50">
-        Projects
-      </h1>
-      <div className="flex flex-wrap justify-center">
-        {projects.map((project) => (
-          <div key={project.title} className="mx-6 my-8">
-            <ProjectCard {...project} />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const About = () => {
-  return (
-    <div
-      id="about"
-      className="flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-20 xl:gap-52 py-20 md:py-32 px-6 sm:px-16 lg:px-120"
-    >
-      <div className="max-w-xl">
-        <h2 className="font-display text-2xl md:text-3xl font-bold mb-4 text-neutral-900 dark:text-neutral-50">
-          Hi there!
-        </h2>
-
-        <p className="font-body text-sm xl:text-lg mb-4 text-neutral-600 dark:text-neutral-300">
-          I’m
-          <span className="font-bold"> Mahaveer Mandloi</span>, a Computer
-          Science graduate and passionate Full-Stack Developer based in India.
-          Currently working as an Analyst Intern at
-          <span className=" text-purple-500 font-bold"> KPMG</span>, I enjoy
-          building clean, efficient, and user-friendly web applications. I
-          thrive on solving real-world challenges and continuously expanding my
-          skills.
-          <br />
-          <br />
-          I’m skilled in React, Node.js, Express, MongoDB, and Tailwind CSS,
-          with growing experience in Next.js. I take pride in writing clean
-          code, learning new technologies, and contributing to projects that
-          make an impact. Outside of work, I enjoy exploring tech trends,
-          collaborating on new ideas, and staying curious every day.
-        </p>
-
-        <Link href="/about">
-          <button className="flex items-center rounded-default font-body text-2xs md:text-xs font-semibold px-4 py-2.5 text-neutral-50 dark:text-neutral-900 uppercase bg-purple-500 dark:bg-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200">
-            Read More
-          </button>
-        </Link>
-      </div>
-      <div className="-mt-6 ml-6 md:ml-0">
-        <div className="relative">
-          <div className="absolute z-0 -left-7 -bottom-7">
-            <Image
-              src="/images/image1.jpg"
-              alt="My Picture"
-              width={320}
-              height={510}
-              className="rounded-default"
-            />
-          </div>
-          <div className="z-10 bottom-0 left-0 rounded-default bg-purple-400 w-[320px] h-[425px]"></div>
+const Projects = () => (
+  <div id="projects">
+    <h1 className="font-display text-3xl md:text-4xl font-bold pb-6 text-center text-neutral-900 dark:text-neutral-50">
+      Projects
+    </h1>
+    <div className="flex flex-wrap justify-center">
+      {projects.map((project) => (
+        <div key={project.title} className="mx-6 my-8">
+          <ProjectCard {...project} />
         </div>
+      ))}
+    </div>
+  </div>
+);
+
+const About = () => (
+  <div
+    id="about"
+    className="flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-20 xl:gap-52 py-20 md:py-32 px-6 sm:px-16 lg:px-120"
+  >
+    <div className="max-w-xl">
+      <h2 className="font-display text-2xl md:text-3xl font-bold mb-4 text-neutral-900 dark:text-neutral-50">
+        Hi there!
+      </h2>
+      <p className="font-body text-sm xl:text-lg mb-4 text-neutral-600 dark:text-neutral-300">
+        I’m <span className="font-bold"> Mahaveer Mandloi</span>, a Computer
+        Science graduate and passionate Full-Stack Developer based in India.
+        Currently working as an Analyst Intern at
+        <span className=" text-purple-500 font-bold"> KPMG</span>, I enjoy
+        building clean, efficient, and user-friendly web applications. I thrive
+        on solving real-world challenges and continuously expanding my skills.
+        <br />
+        <br />
+        I’m skilled in React, Node.js, Express, MongoDB, and Tailwind CSS, with
+        growing experience in Next.js. I take pride in writing clean code,
+        learning new technologies, and contributing to projects that make an
+        impact. Outside of work, I enjoy exploring tech trends, collaborating on
+        new ideas, and staying curious every day.
+      </p>
+      <Link href="/about">
+        <button className="flex items-center rounded-default font-body text-2xs md:text-xs font-semibold px-4 py-2.5 text-neutral-50 dark:text-neutral-900 uppercase bg-purple-500 dark:bg-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200">
+          Read More
+        </button>
+      </Link>
+    </div>
+    <div className="-mt-6 ml-6 md:ml-0">
+      <div className="relative">
+        <div className="absolute z-0 -left-7 -bottom-7">
+          <Image
+            src="/images/image1.jpg"
+            alt="My Picture"
+            width={320}
+            height={510}
+            className="rounded-default"
+          />
+        </div>
+        <div className="z-10 bottom-0 left-0 rounded-default bg-purple-400 w-[320px] h-[425px]"></div>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 const ScrollButton = () => {
   const handleScrollDown = () => {
@@ -257,9 +255,7 @@ const ScrollUpButton = () => {
     };
   }, []);
 
-  const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const handleClick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <button
