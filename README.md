@@ -38,7 +38,7 @@ Welcome to my portfolio website! This website showcases my skills and demonstrat
 
 To set up the project locally and start development, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/nsafarova/my-portfolio.git`
+1. Clone the repository: `git clone https://github.com/mahaveer-portfolio/my-portfolio.git`
 2. Install dependencies: `npm install`
 3. Start the development server: `npm run dev`
 4. Open your browser and navigate to `http://localhost:3000`
