@@ -69,7 +69,7 @@ const Hero = () => {
       <div className="md:mx-auto max-w-4xl">
         <div className="text-left md:text-center">
           <h1 className="font-display text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 dark:text-neutral-50">
-            Hi, I&apos;m Mahaveer Singh Mandloi.
+            Hi, I&apos;m Mahaveer Mandloi.
           </h1>
           <h2 className="font-display text-2xl md:text-3xl font-bold text-purple-900 dark:text-purple-300">
             Full Stack Developer • Analyst • Lifelong Learner
