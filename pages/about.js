@@ -65,7 +65,7 @@ const Intro = () => {
         </div>
         <div className="md:w-2/3 md:pl-10">
           <p className="font-body text-sm md:text-base text-neutral-700 dark:text-neutral-100 mb-2">
-            I'm Mahaveer Mandloi, a Computer Science graduate from NMIMS (CGPA
+            I&apos; m Mahaveer Mandloi, a Computer Science graduate from NMIMS (CGPA
             3.68/4) with experience in full-stack web development and a strong
             interest in cloud security and scalable systems. At KPMG, I worked
             on cybersecurity compliance projects involving GDPR, DPDPA, and ISO

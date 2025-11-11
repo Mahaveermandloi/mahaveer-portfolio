@@ -7,19 +7,16 @@ import Link from "next/link";
 // Step 1: Experience data array
 const experienceData = [
   {
-    company: "KPMG",
+    company: "KPMG ---> BSR",
     role: "Analyst",
-    duration: "Jan 2025 - Jul 2025",
+    duration: "Jan 2025 - Present",
     description:
-      "Worked on enterprise-level backend systems using Java and Spring Boot. Built REST APIs, integrated AWS services, and optimized database queries for reporting tools.",
-    techStackIcons: [
-      { key: "java", icon: <FaJava /> },
-      { key: "aws", icon: <FaAws /> },
-      { key: "mysql", icon: <FaDatabase /> },
-    ],
+      "Assisted in implementing privacy and compliance frameworks (GDPR, DPDPA) and governance models across multiple business units. Worked on backend systems using Java and Spring Boot, developing REST APIs, integrating AWS services, and optimizing database queries for reporting tools. Contributed to improving data governance, reducing compliance risks, and enhancing overall operational efficiency.",
+    techStackIcons: [],
     image: "/images/kpmgexp.png",
     certificateUrl: "https://example.com/kpmg-certificate.pdf",
     companyWebsite: "https://home.kpmg/in/en/home.html",
+    pageLink: "/kpmg_exp",
   },
 
   {
@@ -27,15 +24,12 @@ const experienceData = [
     role: "Web Developer Intern",
     duration: "May 2024 - July 2024",
     description:
-      "Developed the INTSO admin panel using React and Node.js. Implemented authentication with JWT, image upload, forgot password via Nodemailer, and deployed using PuTTY.",
-    techStackIcons: [
-      { key: "react", icon: <FaReact /> },
-      { key: "node", icon: <FaNode /> },
-      { key: "mysql", icon: <FaDatabase /> },
-    ],
+      "Developed the INTSO Education Admin Portal using the MERN stack, implementing authentication, role-based access, and secure file uploads. Managed student and admin data, designed responsive UI with Tailwind CSS, and deployed backend services using SSH. Improved workflow efficiency and enhanced system usability for administrators.",
+    techStackIcons: [],
     image: "/images/shantiinfosoftLLP.png",
     certificateUrl: "https://example.com/shanti-certificate.pdf",
     companyWebsite: "https://shantiinfosoft.com",
+    pageLink: "/shantiinfosoft_exp",
   },
 ];
 
@@ -69,8 +63,7 @@ const ExperienceCard = ({
   description,
   techStackIcons,
   image,
-  certificateUrl,
-  companyWebsite,
+  pageLink,
 }) => {
   return (
     <>
@@ -114,12 +107,8 @@ const ExperienceCard = ({
           </div>
 
           <div className="flex py-2 ml-4 font-body text-center text-2xs md:text-xs font-semibold">
-            <Link href="www.kpmg.com">
-              <button
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center mr-4 rounded-default font-body px-4 py-2.5 text-neutral-50 dark:text-neutral-900 uppercase bg-purple-500 dark:bg-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200"
-              >
+            <Link href={pageLink}>
+              <button className="flex items-center mr-4 rounded-default font-body px-4 py-2.5 text-neutral-50 dark:text-neutral-900 uppercase bg-purple-500 dark:bg-purple-300 hover:text-neutral-50 dark:hover:text-neutral-900 hover:bg-purple-600 dark:hover:bg-purple-200">
                 View Experience
               </button>
             </Link>

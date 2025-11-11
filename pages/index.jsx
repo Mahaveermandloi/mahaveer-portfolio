@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Mahaveer Mandloi | Front-end Dev</title>
+        <title>Mahaveer Mandloi</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -51,7 +51,7 @@ const Hero = () => {
     Math.floor(Math.random() * (max - min + 1)) + min;
 
   useEffect(() => {
-    const numBubbles = 16;
+    const numBubbles = 20;
     const newBubbles = Array(numBubbles)
       .fill(null)
       .map(() => {
